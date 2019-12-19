@@ -7,9 +7,24 @@ public class Student { //클래스명은 대문자로 사용한다. public 클래스명은 자바 파
 	public String address;	
 	// 기능을 구현할 때는 '메서드'를 사용한다. 함수의 일종이다.
 	
+//	public Student() {} // default constructor
+	
+	public Student(String name) {
+		studentName=name;
+	}
+	
+	
+	
+	public Student(int id, String name) {
+		studentID=id;
+		studentName=name;
+		address="주소없음";
+	}
+	
+	
 	public void showStudentInfo() // 괄호 안에 매개변수가 들어갈 수 있다.  // 반환 값(return)이 없는 경우 void 를 사용
 	{
-		System.out.println(studentName + " ," + address);
+		System.out.println(studentName + ", " + address);
 	}
 	
 }
